@@ -1,53 +1,79 @@
 # AI-Powered Professional Photo Editing & Reference Intelligence
 
-This repository contains the initial architecture and starter implementation for an AI-powered desktop application for professional photo editing, reference intelligence, and Adobe Photoshop handoff.
+This repository is the technical foundation for an AI-assisted desktop workflow built for wedding, portrait, and event photography production. It combines image analysis, reference-driven style matching, adaptive enhancement, and Photoshop integration.
 
-## Overview
+## Project intent
 
-The project is designed for wedding, portrait, and event photography workflows. It combines:
+The application is designed to help professional photographers:
 
-- image classification and quality analysis
-- reference-based editing style matching
-- adaptive exposure, white balance, and colour correction
-- skin-tone protection and detail enhancement
-- Photoshop-ready output handoff
-- batch processing and project-level consistency
+- import large event and portrait photo sets
+- analyze individual images for lighting, exposure, and scene quality
+- match each image to a relevant reference profile
+- create a non-destructive editing plan before applying changes
+- preserve natural skin tones and realistic detail
+- batch-process high-volume jobs efficiently
+- hand off selected photos to Adobe Photoshop for final refinement and export
 
-## MVP Focus
+## Repository architecture
 
-- Windows desktop application foundation
-- batch photo import and project organisation
-- image quality and lighting analysis
-- editable reference metadata and image library
-- adaptive photo enhancement pipeline
-- Photoshop integration stub for direct handoff
+```text
+ai-photo-editing-reference-intelligence/
+├── app/
+├── core/
+├── src/
+│   ├── client_ui/
+│   ├── backend_core/
+│   ├── ai_engine/
+│   ├── image_core/
+│   └── ps_bridge/
+├── server/
+├── docs/
+├── tests/
+├── README.md
+├── requirements.txt
+├── pyproject.toml
+├── .gitignore
+└── technical_project_brief_and_system_architecture.md
+```
 
-## Repository Layout
+## Current implementation status
 
-- `app/` – application entry points and UI shell
-- `core/` – image processing, analysis, and Photoshop integration logic
-- `data/` – project assets, references, and export folders
-- `requirements.txt` – Python dependencies
+This repository currently includes:
 
-## Quick Start
+- a Windows desktop app shell
+- starter image-processing functions
+- a Photoshop integration stub
+- a basic orchestration structure aligned with the proposed system architecture
+
+## Planned milestones
+
+1. Proof of concept over a representative wedding and portrait dataset
+2. Image analysis and classification engine
+3. Reference intelligence and stylistic matching
+4. Non-destructive enhancement pipeline
+5. Photoshop bridge and handoff workflow
+6. Quality assurance, performance optimization, and pilot deployment
+
+## Development direction
+
+The architecture follows a modular design:
+
+- `src/client_ui` for interactive review and editing workflows
+- `src/backend_core` for queueing, processing orchestration, and persistence
+- `src/ai_engine` for scene classification and vector matching
+- `src/image_core` for color science, frequency separation, and enhancement engines
+- `src/ps_bridge` for Photoshop-driven handoff and automation
+- `server` for optional cloud metadata and reference harvesting services
+
+## Quick start
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+source .venv/bin/activate
 pip install -r requirements.txt
 python -m app.main
 ```
 
-## Planned Modules
+## Notes
 
-- photo import and validation
-- classification and scene analysis
-- reference intelligence engine
-- editing plan generation
-- non-destructive enhancement workflow
-- Photoshop handoff
-- export and QA review
-
-## Current Status
-
-This repo includes a starter foundation for the core image processing and Photoshop integration layer, which can be extended into the full desktop application.
+This is an initial implementation foundation. It is intentionally modular and extensible so it can evolve into the full technical specification described in the project brief.
