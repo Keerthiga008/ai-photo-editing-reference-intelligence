@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Photo Editor Panel</title>
+    <link rel="stylesheet" href="./panel.css" />
+  </head>
+  <body>
+    <main class="panel-shell">
+      <header class="panel-header">
+        <h1>Reference Intelligence</h1>
+        <button id="openPopup">Open popup</button>
+      </header>
+
+      <section class="panel-grid">
+        <article class="panel-card">
+          <h2>Inputs & Sources</h2>
+          <ul>
+            <li>Local image files</li>
+            <li>Web URLs</li>
+            <li>Social media references</li>
+            <li>Existing project library</li>
+          </ul>
+        </article>
+
+        <article class="panel-card">
+          <h2>AI Analysis</h2>
+          <p>Lighting, subject, palette, and editing suggestions are generated here.</p>
+          <button id="runAnalysis" class="primary">Run analysis</button>
+        </article>
+
+        <article class="panel-card">
+          <h2>Export</h2>
+          <p>Download final preview in PNG, JPG, TIFF, or WebP.</p>
+          <button id="exportImage" class="secondary">Export image</button>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="./panel.js"></script>
+  </body>
+</html>

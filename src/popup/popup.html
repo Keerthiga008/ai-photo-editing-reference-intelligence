@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Photo Editor</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header class="header">
+        <div>
+          <p class="eyebrow">AI Photo Editor</p>
+          <h1>Reference Intelligence</h1>
+        </div>
+      </header>
+
+      <section class="card">
+        <label for="imageUrl">Image URL or file</label>
+        <input id="imageUrl" type="text" placeholder="https://example.com/photo.jpg" />
+        <button id="analyzeBtn" class="primary">Analyze</button>
+      </section>
+
+      <section class="card">
+        <h2>Quick actions</h2>
+        <div class="actions">
+          <button class="secondary" data-action="capture">Capture active image</button>
+          <button class="secondary" data-action="reference">Save as reference</button>
+          <button class="secondary" data-action="export">Export JPG</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Result</h2>
+        <div id="result" class="result-box">
+          No analysis yet.
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "ai-photo-editing-reference-intelligence",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:server": "node server/server.js",
+    "dev:extension": "echo \"Load the extension from the repo root in Chrome/Edge with Developer Mode enabled.\"",
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.0",
+    "dotenv": "^16.4.1",
+    "multer": "^1.4.0"
+  }
+}
